@@ -1,0 +1,92 @@
+webSPA - single page application
+
+INSTALAR CLI 	
+	npm i -g @angular/cli
+
+CRIAR APLICAÇÃO
+	ng new minha-app
+
+FLUXO DA APLICAÇÃO
+main.ts => AppModule => AppComponent => arvores de components
+
+COMPONENTE
+	é um pedaço da app(trecho de codigo)composto por HTML, css e ts.
+	tem o comportamento, a estrutura e estilo(ts, html, css)
+MODULE
+
+tem que ter:
+		Declarations: Components, Diretivas, Pipes,
+		Exports(td q prexisa ser visivel para fora do modulo): Components, Diretivas, Pipes,
+		Imports(importa outros modulos q vc precisa para usar): Modulos A, B, c ...
+		Providers: services A, b, c
+
+		BootStrap: só no appmodule inicial.
+TEmpate Css e Html se usar o --minial no new app, ele coloca no arquivo angular.json = "@schematics/angular:component": {
+          "inlineTemplate": false,
+          "inlineStyle": false,
+
+mudar tsd pra false, assim ele cria 1 arquivo pra cada coisa não 1 arqvio só pros 2
+
+crias-se um a hinterpolação  double mustarge {{passa o nome da variavel criada no componente}} (html)
+
+HTML FLUXO - 
+
+app.component.ts => coloca-se no appcomponent.html <app-nome do componente criado></app-nome do componente criado>
+fazendo isso qdo start a aplicação o appcompnente vai ler o html dele e aí vai encaminha pro => nomecomponent.html
+
+HTML HEADER
+mat-toolbar => importar o module e declarar nos imports do app.module.ts
+
+class"header" ou se qser uma sombra elevação class"header mat-elevation-z4"
+
+span
+  a
+    img ou i 
+
+i - é icone class="material-icons"> home ou dashboard (é o tipo do icone) </i>
+
+
+STYLE.CSS - css global da aplicação 
+é onde vc define o sestilo das classe globalmente 
+ex: 
+.red {
+	color: rgb(227, 94, 107);     
+     }
+
+
+
+ou outro ex
+.v-middle {
+    vertical-align: middle;      serve pra deixar alinhado a linha
+}
+
+
+
+aí vc pode usar nas suas class no html
+ex: span class"red"     ou  <i class="material-icons red v-middle">	
+
+
+<mat-footer class="footer>
+
+ex css
+.footer {
+    position: fixed;  posição fixada
+    bottom: 0;     botton eh fundo da página rodapé
+}
+
+COMPONENTS
+
+uma class passa a ser um component qdo ela tem um decorator ex: @Component
+
+
+
+
+
+
+
+
+
+
+
+
+
